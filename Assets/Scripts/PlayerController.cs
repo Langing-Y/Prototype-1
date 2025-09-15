@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
         currentSpeed = verticalInput * VehicleSpeed;
 
         // 移动车辆
-        transform.Translate(1,0,0);
-        //transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * VehicleSpeed);
+        //transform.Translate(1,0,0);
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * VehicleSpeed);
 
         // 真实转向逻辑：只有在移动时才能转向
         if (Mathf.Abs(currentSpeed) > minSpeedForTurn)
