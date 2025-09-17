@@ -20,6 +20,10 @@ public class PlayerController2 : MonoBehaviour
     private Vector3 currentSpot;
     private Vector3 moveVector;
 
+    private void Start()
+    {
+        Debug.Log("游戏开始，当前生命值：" + PlayerHealth.health);
+    }
 
     // Update is called once per frame
     void Update()
