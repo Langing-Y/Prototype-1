@@ -10,16 +10,11 @@ public class PlayerController : MonoBehaviour
     [Range(0f, 1f)]
     public float minSpeedForTurn = 0.1f;  // 最小转向速度阈值
 
-    private float verticalInput;
+    [SerializeField]private float verticalInput;
     private float horizontalInput;
     private float currentSpeed;  // 当前实际速度
 
-    void Start()
-    {
-
-    }
-
-    void Update()
+    void FixedUpdate()
     {
         // 获取输入
         verticalInput = Input.GetAxis("Vertical");
